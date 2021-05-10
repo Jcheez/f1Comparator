@@ -20,7 +20,7 @@ class Prediction:
             driver = input("Please input surname of driver: ")
             drivers.append(driver)
             print(drivers)
-            response = input("Do you have another driver to add?(y/n)")
+            response = input("Do you have another driver to add?(y/n) ")
             if response == "n":
                 default = False
         print("Input the names of teams in order from first to last")
@@ -28,13 +28,14 @@ class Prediction:
             team = input("Please input name of team: ")
             teams.append(team)
             print(teams)
-            response = input("Do you have another team to add?(y/n)")
+            response = input("Do you have another team to add?(y/n) ")
             if response == "n":
                 default2 = False
         prediction[name]["drivers"] = drivers
         prediction[name]["teams"] = teams
         new_file.write(str(prediction))
         new_file.close()
+        return Prediction()
 
     @staticmethod
     def add_predictions():
@@ -73,20 +74,24 @@ class Prediction:
         file = open("predictions.txt", "w+")
         file.write(str(prediction))
         file.close()
+        return Prediction()
 
     def initialise_prediction(self):
         try:
             file = open("predictions.txt")
             self.predictions = json.loads(file.readline().replace("\'", "\""))
             file.close()
+            return self
         except FileNotFoundError:
             print("Please create a prediction first")
+            return self
 
     def view_prediction(self, name):
         if name in self.predictions:
             return self.predictions[name]
         else:
-            return "User has not keyed in a prediction"
+            print("User has not keyed in a prediction")
+            return self
 
     def delete_prediction(self, name):
         if name in self.predictions:
@@ -94,5 +99,8 @@ class Prediction:
             file = open("predictions.txt", "w+")
             file.write(str(self.predictions))
             file.close()
+            print("Prediction deleted!")
+            return self
         else:
-            return "Name is not found"
+            print("Name is not found")
+            return self
