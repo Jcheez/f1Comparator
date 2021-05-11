@@ -93,6 +93,9 @@ class Prediction:
             print("User has not keyed in a prediction")
             return self
 
+    def get_all_prediction(self):
+        return self.predictions
+
     def delete_prediction(self, name):
         if name in self.predictions:
             del self.predictions[name]
