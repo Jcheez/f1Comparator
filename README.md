@@ -1,4 +1,4 @@
-# Birthday Manager
+# F1 Comparator
 
 A program that provides information about the constructor/driver championships for Formula 1.
 
