@@ -20,13 +20,19 @@ If you do not have python installed on your computer, follow this:
 1. [Click](https://python.org) here to download python.
 2. Download the files in this repository.
 3. Place all the files in a common folder.
-4. Click on main.py and start using the script!
+4. cd to the directory where requirements.txt is found.
+5. Activate virualenv
+6. Run the following to install dependencies: pip install -r requirements.txt
+7. Click on main.py and start using the script!
 
 If you have python installed on your computer, follow this:
 
 1. Download the files in this repository.
 2. Place all the files in a common folder.
-3. Click on main.py and start using the script!
+3. cd to the directory where requirements.txt is found.
+4. Activate virualenv
+5. Run the following to install dependencies: pip install -r requirements.txt
+6. Click on main.py and start using the script!
 
 ### Future plans
 
