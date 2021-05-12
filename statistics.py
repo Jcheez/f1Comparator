@@ -113,3 +113,8 @@ class Statistics:
                     current_actual_position += 1
                 current_predicted_position += 1
             return inaccuracy_score
+
+    def calculate_all_deviation(self, who):
+        for person in self.predictions.keys():
+            print(person)
+            print(self.calculate_deviation(person, who))
