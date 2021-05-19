@@ -1,0 +1,5 @@
+links.txt
+predictions.txt
+__pycache__
+venv/
+/.idea
