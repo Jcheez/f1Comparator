@@ -1,7 +1,7 @@
 from predictions import Prediction
 from scrapper import Scrapper
 
-
+### Statistics class ###
 class Statistics:
     def __init__(self):
         self.has_scrapper_links = False
